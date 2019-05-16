@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+    <template id="my-todos">
+        <slot name="title">todos</slot>
+        <div>
+            <input type="text">
+            <button class="add">+</button>
+        </div>
+        <div class="wrapper">
+            <slot name="details"></slot>
+        </div>
+    </template>
+
+    <my-todos>
+        <h4 slot="title">this is the title</h4>
+        <ul slot="details">
+            <li>A</li>
+            <li>B</li>
+        </ul>
+    </my-todos>
+
+    <script src="./main.js"></script>
+
+</body>
+</html>
